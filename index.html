@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Sabor & Arte</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Experiência Gastronômica Excepcional</h2>
+            <p>Descubra sabores únicos em um ambiente sofisticado</p>
+            <a href="#reservas" class="btn">Faça sua reserva</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Fundado em 2010, o Restaurante Sabor & Arte combina tradição e inovação para oferecer uma experiência gastronômica memorável.</p>
+                    <p>Nossos chefs utilizam ingredientes frescos e locais para criar pratos que encantam todos os sentidos.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="images/chef.jpg" alt="Nosso chef">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cardapio" class="section">
+        <div class="container">
+            <h2>Nosso Cardápio</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="entradas">Entradas</button>
+                <button class="category-btn" data-category="principais">Pratos Principais</button>
+                <button class="category-btn" data-category="sobremesas">Sobremesas</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+            </div>
+            <div class="menu-items" id="menu-items">
+                <!-- Itens serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="section">
+        <div class="container">
+            <h2>Faça sua Reserva</h2>
+            <form id="reserva-form" class="reserva-form">
+                <div class="form-group">
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+                <div class="form-group">
+                    <select id="pessoas" name="pessoas" required>
+                        <option value="" disabled selected>Número de pessoas</option>
+                        <option value="1">1 pessoa</option>
+                        <option value="2">2 pessoas</option>
+                        <option value="3">3 pessoas</option>
+                        <option value="4">4 pessoas</option>
+                        <option value="5">5+ pessoas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensagem" name="mensagem" placeholder="Observações especiais"></textarea>
+                </div>
+                <button type="submit" class="btn">Reservar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <h3>Informações</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Gastronômica, 123 - Centro</p>
+                    <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> contato@saborearte.com</p>
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Terça a Domingo: 12h - 23h</p>
+                </div>
+                <div class="contato-form">
+                    <form id="contato-form">
+                        <div class="form-group">
+                            <input type="text" id="contato-nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contato-email" name="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="contato-assunto" name="assunto" placeholder="Assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contato-mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sabor & Arte</h3>
+                    <p>Excelência em gastronomia desde 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cardapio">Cardápio</a></li>
+                        <li><a href="#reservas">Reservas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Restaurante Sabor & Arte. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
